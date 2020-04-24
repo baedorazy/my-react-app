@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from "axios";
 import Movie from "../components/Movie";
-import './components/Home.css';
+import './App.css';
 
 class Home extends React.Component {
     state = {
@@ -16,7 +16,7 @@ class Home extends React.Component {
             }
         } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
         this.setState({movies: movies, isLoading: false}); // key value 동일하면 하나의 이름으로 가능.
-        console.log(movies);
+        //console.log(movies);
     };
     
     componentDidMount() {

@@ -26,3 +26,12 @@ body,
     justify-content: center;
     align-items: center;
 }
+
+.about {
+    margin-top: 20px;
+}
+
+.about::first-letter {
+    font-size: 130%;
+    text-transform: uppercase;
+}

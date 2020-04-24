@@ -5,12 +5,13 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 50px;
-    width: 80%;
+    width: 100%;
     padding-top: 70px;
+    margin-left: 30px;
 }
 
 .movies .movie {
-    width: 45%;
+    width: 48%;
     background: #fff;
     margin-bottom: 70px;
     display: flex;
