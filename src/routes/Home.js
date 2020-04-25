@@ -29,26 +29,23 @@ class Home extends React.Component {
             {
                 isLoading
                     ?
-                    (
-                        <div className="loader">
+                    (<div className="loader">
                             <span className="loader__text">Loading...</span>
-                        </div>
-                    )
+                    </div>)
                     :
-                    (
-                        <div className="movies">
-                            {  movies.map(movie => (
-                                <Movie id={movie.id}
-                                       key={movie.id}
-                                       year={movie.year}
-                                       summary={movie.summary}
-                                       poster={movie.medium_cover_image}
-                                       title={movie.title}
-                                       genres={movie.genres}
-                                /> ))
-                            }
-                        </div>
-                    )
+                    (<div className="movies">
+                        {  movies.map(movie => (
+                            <Movie id={movie.id}
+                                   key={movie.id}
+                                   year={movie.year}
+                                   summary={movie.summary}
+                                   poster={movie.medium_cover_image}
+                                   title={movie.title}
+                                   genres={movie.genres}
+                            /> ))
+                        }
+                    </div>)
+                    
             }
         </section>;
     }

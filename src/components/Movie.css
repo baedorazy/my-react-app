@@ -56,3 +56,40 @@
     margin-right: 10px;
     font-size: 14px;
 }
+
+.movies .movie a {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 2fr;
+    grid-gap: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 상세 */
+.movie__detail {
+    margin-top: 40px;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+    border-radius: 5px;
+}
+
+.movie__detail h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+}
+.movie__detail .wrap {
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) 2fr;
+    grid-column-gap: 10px;
+}
+.movie__detail img {
+    margin-top: 0;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
