@@ -34,7 +34,8 @@
   },
   "devDependencies": {
     "axios": "^0.19.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-router-dom": "^5.1.2"
   },
   "homepage": "https://baedorazy.github.io/my-react-app"
 }

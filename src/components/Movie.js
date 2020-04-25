@@ -1,12 +1,23 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import './Movie.css';
+import { Link } from "react-router-dom";
 
 // 컴포넌트가 state가 필요가 없다면
 // react.component를 상속받을 필요가 없어서 클래스로 생성안험.
 function Movie({id, year, title, summary, poster, genres}) {
     return (
         <div className="movie" id={id} title={title}>
+            <Link to={{
+                pathname: `/movie/${id}`,
+                state: {
+                    year,
+                    title,
+                    summary,
+                    poster,
+                    genres
+                }
+            }}>
             <img src={poster} alt={title} />
             <div className="movie__data">
                 <h3 className="movie__title">{title}</h3>
@@ -20,6 +31,7 @@ function Movie({id, year, title, summary, poster, genres}) {
                 </ul>
                 <p className="movie__summary">{summary.slice(0,180)} ...</p>
             </div>
+            </Link>
         </div>
     );
     
