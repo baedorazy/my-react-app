@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import './Movie.css';
 import { Link } from "react-router-dom";
 
-// 컴포넌트가 state가 필요가 없다면
-// react.component를 상속받을 필요가 없어서 클래스로 생성안험.
 function Movie({id, year, title, summary, poster, genres}) {
     return (
         <div className="movie" id={id} title={title}>
@@ -34,8 +32,6 @@ function Movie({id, year, title, summary, poster, genres}) {
             </Link>
         </div>
     );
-    
-    
 }
 
 Movie.propTypes = {

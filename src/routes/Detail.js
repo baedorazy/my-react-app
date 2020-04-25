@@ -1,6 +1,5 @@
 import React from "react";
 
-// React.Component < - component "C" upperCase
 class Detail extends React.Component {
     componentDidMount() {
         const { location, history } = this.props;
@@ -11,9 +10,6 @@ class Detail extends React.Component {
         }
     };
     render() {
-        // Detail컴포넌트를 호출할 때 redner부터 콜.
-        // 그래서 여기서 location.state가 없는지 먼저 체크해서 에러뿜.
-        // 렌더를 조건줘서 해결한다.
         const {location} = this.props;
         const movie = location.state;
         if(location.state) {
