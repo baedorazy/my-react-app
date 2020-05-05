@@ -1,19 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { HashRouter, Route } from "react-router-dom";
-// import { BrowserRouter } from "react-router-dom";
 import  About from "./routes/About";
 import  Home from "./routes/Home";
 import  Detail from "./routes/Detail";
 import  Navigation from "./components/Navigation";
+import  Join from "./components/Join";
 
-function App() {
-    return (
-        <HashRouter>
-            <Navigation />
-            <Route path="/" exact={true} component={Home}></Route>
-            <Route path="/about" component={About}></Route>
-            <Route path="/movie/:id" component={Detail}></Route>
-        </HashRouter>);
+class App extends Component {
+    // handleCreate = (data) => {
+    //     console.log(data);
+    // };
+    //
+    render() {
+        return (
+            <>
+                <HashRouter>
+                    <Navigation />
+                    <Route path="/" exact={true} component={Home}></Route>
+                    <Route path="/join" exact={true} component={Join}></Route>
+                    <Route path="/about" component={About}></Route>
+                    <Route path="/movie/:id" component={Detail}></Route>
+    
+                </HashRouter>
+                {/*<div>*/}
+                    {/*<Join onCreate={this.handleCreate} />*/}
+                {/*</div>*/}
+            </>
+        );
+    }
 }
 
 export default App;
